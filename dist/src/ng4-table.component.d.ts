@@ -1,0 +1,31 @@
+import { OnInit, OnChanges, SimpleChanges } from '@angular/core';
+export declare class Ng4Table implements OnInit, OnChanges {
+    data: any[];
+    options: any;
+    showOptions: Object;
+    tableHeaders: string[];
+    paginationPrevious: boolean;
+    paginationNext: boolean;
+    rowNumber: string;
+    IsPagination: Boolean;
+    PaginationArray: any;
+    CurrentPage: number;
+    firstElement: number;
+    lastElement: number;
+    sortedElement: string;
+    sortedWay: number;
+    filterInput: string;
+    constructor();
+    ngOnInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    changeRowNumber(): void;
+    verifyIfPagination(): void;
+    generatePaginationArray(): void;
+    changePage(pageNumber: number): void;
+    resetPage(): void;
+    updatePreviousNext(): void;
+    updateFirstElement(): void;
+    updateLastElement(): void;
+    getHeaders(): void;
+    sortTable(element: string): void;
+}
